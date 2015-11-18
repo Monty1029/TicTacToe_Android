@@ -1,3 +1,3 @@
 A simple Tic-Tac-Toe game for Android.
 
-Complete version for future workshop use.
+Complete demo version for Android Studio workshop.
