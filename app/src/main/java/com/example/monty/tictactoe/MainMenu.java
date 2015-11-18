@@ -40,8 +40,11 @@ public class MainMenu extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //Stars an activity (new screen)
     public void start(View v) {
+        //Create Intent object whenever you have an intention to perform an action on another class.
+        //In this case, have an intention to act on the MainActivity class.
         Intent start = new Intent(this, MainActivity.class);
-        startActivity(start);
+        startActivity(start); //Starts the activity (MainActivity);
     }
 }

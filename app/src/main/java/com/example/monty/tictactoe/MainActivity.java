@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Move m;
     boolean gameOver;
 
+    //Creates the screen and its contents from its respective XML file.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         ttt = new TicTacToe();
     }
 
+    //The next two classes create the Options Menu bar at the top. This can be removed if you want.
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -47,11 +49,14 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //The listener method for when a button gets clicked.
     public void click(View v) {
-        Button button = (Button) v;
+        Button button = (Button) v; //Casts the clicked item as a button to use later on.
+        //Checks if someone has won the game already.
         if (gameOver) {
             button.setEnabled(false);
         }
+        //If the game is still ongoing, then set the buttons and turns accordingly
         else {
             String bTag = button.getTag().toString();
             int row = ((int) bTag.charAt(0)) - 48;
