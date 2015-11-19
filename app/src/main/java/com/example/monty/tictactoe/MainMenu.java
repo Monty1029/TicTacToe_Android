@@ -46,5 +46,6 @@ public class MainMenu extends AppCompatActivity {
         //In this case, have an intention to act on the MainActivity class.
         Intent start = new Intent(this, MainActivity.class);
         startActivity(start); //Starts the activity (MainActivity);
+        this.finish();
     }
 }
